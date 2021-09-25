@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<title>Frontend Mentor | Time tracking dashboard</title>
+
+		<!-- CSS Link -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- JS Link -->
+		<script src="script/script.js" defer ></script>
+
+		<!-- Font Link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<main>
+			<header class="profile">
+				<div class="person">
+					<img src="images/image-jeremy.png" alt="Jeremy Robson" />
+					<div>
+						<p>Report for</p>
+						<h1>Jeremy Robson</h1>
+					</div>
+				</div>
+				<ul>
+					<li id="daily" class="nav">Daily</li>
+					<li id="weekly" class="nav">Weekly</li>
+					<li id="monthly" class="nav">Monthly</li>
+				</ul>
+			</header>
+
+			<div class="inner-container">
+
+				<div class="time-table work">
+					<div>
+						<div class="header">
+							<p>
+								Work
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="work-current">0hrs</p>
+							<p class="previous" id="work-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="time-table play">
+					<div>
+						<div class="header">
+							<p>
+								Play
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="play-current">0hrs</p>
+							<p class="previous" id="play-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="time-table study">
+					<div>
+						<div class="header">
+							<p>
+								Study
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="study-current">0hrs</p>
+							<p class="previous" id="study-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="time-table exercise">
+					<div>
+						<div class="header">
+							<p>
+								Exercise
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="exercise-current">0hrs</p>
+							<p class="previous" id="exercise-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="time-table social">
+					<div>
+						<div class="header">
+							<p>
+								Social
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="social-current">0hrs</p>
+							<p class="previous" id="social-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="time-table self-care">
+					<div>
+						<div class="header">
+							<p>
+								Self Care
+								<span>
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+								</span>
+							</p>
+						</div>
+						<div class="time-log">
+							<p class="current" id="selfcare-current">0hrs</p>
+							<p class="previous" id="selfcare-previous">Previous - 0hrs</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+		<footer>
+			<p class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+				Coded by <a href="https://github.com/prajwal18">Prajwal Gautam</a>.
+			</p>
+		</footer>
+
+	</body>
+</html>

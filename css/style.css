@@ -1,0 +1,284 @@
+:root {
+    --blue: hsl(246, 80%, 60%);
+
+    --bight-red: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    min-height: 100vh;
+    
+    padding: 20px;
+    position: relative;
+
+    background: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+h1{
+    font-size: 2.2em;
+    font-weight: 300;
+}
+
+
+
+/* Main */
+main {
+    margin-bottom: 50px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+}
+
+/* Header */
+main header {
+    background: var(--dark-blue);
+    border-radius: 10px;
+}
+
+
+/* Div Person */
+main header div.person{
+    background: var(--blue);
+    border-radius: 10px;
+    padding: 1.5em 1.5em 3em;
+}
+main header div.person img{
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+main header div.person p {
+    margin-top: 2em;
+    font-size: 0.8em;
+    color: var(--pale-blue);
+}
+
+
+/* ul */
+ul{
+    list-style: none;
+    padding: 0.5em 1.5em 1.5em;
+}
+ul li {
+    margin-top: 1em;
+    color: var(--pale-blue);
+    cursor: pointer;
+}
+ul li:hover{
+    color: #fff;
+}
+ul li.clicked {
+    color: #fff;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* Div Inner-Container */
+main div.inner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+/* Div work play study exercise .... */
+div.time-table{
+    padding-top: 2em;
+    border-radius: 10px;
+}
+div.work{
+    background: var(--bight-red) url('../images/icon-work.svg') no-repeat top -5px right 1em;
+    background-size: 3.5em;
+}
+div.play{
+    background: var(--soft-blue) url('../images/icon-play.svg') no-repeat top -5px right 1em;
+    background-size: 3.5em;
+}
+div.study{
+    background: var(--light-red) url('../images/icon-study.svg') no-repeat top -5px right 1em;
+    background-size: 3.5em;
+}
+div.exercise{
+    background: var(--lime-green) url('../images/icon-exercise.svg') no-repeat top -5px right 1em;
+    background-size: 3.5em;
+}
+div.social{
+    background: var(--violet) url('../images/icon-social.svg') no-repeat top -5px right 1em;
+    background-size: 3.5em;
+}
+div.self-care{
+    background: var(--soft-orange) url('../images/icon-self-care.svg') no-repeat top -5px right 1em;
+    background-size: 3em;
+}
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+main div.inner-container > div.time-table > div {
+    background: var(--dark-blue);
+    border-radius: 7px;
+    padding: 1em;
+    height: 100%;
+    cursor: pointer;
+}
+main div.inner-container > div.time-table > div:active{
+    background: var(--desaturated-blue);
+}
+
+
+/* Main Inner-Container TimeTable Header */
+main div.inner-container > div.time-table > div > div.header{
+    position:relative;
+}
+main div.inner-container > div.time-table > div > div.header > p > span > svg{
+    position: absolute;
+    right: 1em;
+    top: 0.3em;
+}
+main div.inner-container > div.time-table > div > div.header > p > span > svg:hover path {
+    fill: #fff;
+}
+/* Main Inner-Container TimeTable Time-Log */
+main div.inner-container > div.time-table > div > div.time-log {
+    margin-top: 20px;
+}
+main div.inner-container > div.time-table > div > div.time-log > p.current {
+    font-size: 2.4em;
+    font-weight: 300;
+}
+main div.inner-container > div.time-table > div > div.time-log > p.previous {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: var(--pale-blue);
+}
+
+
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 10px;
+}
+p.attribution { font-size: 11px; text-align: center; }
+p.attribution a {
+    color: hsl(228, 57%, 63%);
+    text-decoration: none;
+}
+
+
+
+
+/* Smaller Screens */
+@media screen and (max-width: 800px ) {
+    main div.inner-container {
+        grid-template-columns:  1fr;
+    }
+    main header {
+        max-height: 500px;
+    }
+}
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 1.5em;
+    }
+    main div.inner-container div.time-table div.header p{
+        font-size: 0.8em;
+    }
+    main div.inner-container div.time-table div div.time-log p.current{
+        font-size: 1.7em;
+    }
+    main div.inner-container div.time-table div div.time-log p.previous{
+        font-size: 0.7em;
+    }
+    /*---------------- Font Sizes Done ------------------*/
+
+    main {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    main header div.person{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        flex-flow: row wrap;
+        padding: 2em 1em;
+        font-size: 0.8em;
+    }
+    main header div.person img{
+        width: 60px;
+    }
+    main header div.person p{
+        margin: 0em;
+    }
+    main header ul{
+        display: flex;
+        padding: 0 1em 1em;
+        font-size: 0.8em;
+        gap: 1em;
+        justify-content: space-between;
+    }
+    main div.inner-container div.time-table div div.time-log {
+        margin-top: 10px;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
